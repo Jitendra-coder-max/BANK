@@ -1,0 +1,6 @@
+{
+ 
+    "mongoURI": "mongodb+srv://Jittu1245:jittu12345@bank.xz77mpx.mongodb.net/?retryWrites=true&w=majority"
+  ,
+  "jwtSecret":  "mysecrettoken"
+}  
