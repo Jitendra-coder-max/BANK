@@ -290,7 +290,26 @@ const Transaction = require('../../modals/Transaction');
 
 
 
+router.get( '/:accountNumber', async(req, res)=> {
 
+    try{
+        const transaction =  await User.find({ accountNumber: req.params.accountNumber })
+
+        if (!transaction) 
+                
+        return res.status(400).json({ msg: 'User account not found' })
+       res.json(transaction)    
+    }
+    catch(err){
+        console.error(err.message);
+        // if(err.kind == 'ObjectId'){
+        //           return res.status(400).json({ msg: ' User account not found' })
+                // }
+        res.status(500).send('Server Error');
+
+
+    }
+})
 
 
 

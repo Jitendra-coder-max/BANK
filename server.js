@@ -3,7 +3,7 @@ const connectDB = require('./config/db')
 
 const app = express();
 
-// var http = require('http').Server(app);
+
 
 connectDB()
 
@@ -18,7 +18,7 @@ app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/transaction', require('./routes/api/transaction'));
 
 
-// app.use('/api/auth', require('./routes/api/auth'));
+
 const PORT = process.env.PORT || 5000;
 
 
