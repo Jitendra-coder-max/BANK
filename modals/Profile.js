@@ -5,9 +5,7 @@ const ProfileSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
-  // account_number: {
-  //   type: String
-  // },
+  
 
   
   pan: {

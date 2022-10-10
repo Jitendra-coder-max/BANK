@@ -4,11 +4,9 @@ import { setAlert } from './alert';
 
 import {
     GET_PROFILE,
-    // GET_PROFILES,
     PROFILE_ERROR,
     CLEAR_PROFILE,
-    ACCOUNT_DELETED,
-    
+    ACCOUNT_DELETED 
   } from './types';
 
 

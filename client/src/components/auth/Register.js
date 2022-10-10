@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-// import axios from 'axios';
+
 import { setAlert } from '../../actions/alert';
 import {register} from '../../actions/auth'
 import {connect} from 'react-redux'
@@ -46,7 +46,7 @@ if (isAuthenticated) {
         <div className="form-group">
           <input type="text" placeholder="Name" name="name" value={name}
           onChange={e=> onChange(e)} 
-          // required 
+         
           />
         </div>
         <div className="form-group">
@@ -61,8 +61,7 @@ if (isAuthenticated) {
             placeholder="Password"
             name="password"
             value={password}
-          onChange={e=> onChange(e)}
-            // minLength="6"
+          onChange={e=> onChange(e)}  
           />
         </div>
         <div className="form-group">
@@ -71,8 +70,7 @@ if (isAuthenticated) {
             placeholder="Confirm Password"
             name="password2"
             value={password2}
-          onChange={e=> onChange(e)}
-            // minLength="6"
+          onChange={e=> onChange(e)}  
           />
         </div>
 
@@ -80,7 +78,6 @@ if (isAuthenticated) {
           <input type="text" placeholder="Account Balance" name="accountBalance" 
           value={accountBalance}
           onChange={e=> onChange(e)} 
-          // required 
           />
         </div>
         
@@ -105,4 +102,3 @@ if (isAuthenticated) {
   
 
 export default connect(mapStateToProps, {setAlert,register}) (Register);
-// export default connect(mapStateToProps, {setAlert}) (Register);

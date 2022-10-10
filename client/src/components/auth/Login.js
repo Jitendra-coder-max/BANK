@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-// import axios from 'axios';
+
 import {Link, Navigate} from 'react-router-dom';
 
 import { connect } from 'react-redux';
@@ -50,7 +50,6 @@ if (isAuthenticated) {
             name="password"
             value={password}
           onChange={e=> onChange(e)}
-            minLength="6"
           />
         </div>
         

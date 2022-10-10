@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import {deleteAccount, getCurrentProfile,
-    //  deleteAccount
+    
      } from '../../actions/profile';
  import DashboardActions from './DashboardActions';    
 

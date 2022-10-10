@@ -15,7 +15,7 @@ const User = require('../../modals/User');
 router.get('/', auth, async (req,res) => {
     try{
 
-        console.log("err2")
+       
         const user = await User.findById(req.user.id).select('-password');
         res.json(user);
 
@@ -24,7 +24,7 @@ router.get('/', auth, async (req,res) => {
     catch(err){
 
         console.log("err")
-        // console.error(err.message);
+        
         res.status(500).send('Server Error')
 
     }
@@ -32,7 +32,7 @@ router.get('/', auth, async (req,res) => {
 
 
 
-// router.get('/',(req,res) => res.send('User route'));
+
 
 router.post('/',[
 check('email', 'Please include a valid email').isEmail()
@@ -65,8 +65,6 @@ check('email', 'Please include a valid email').isEmail()
             .json({errors: [{msg: 'Invalid Credentials'}]})
         }
         
-
-
         const payload = {
             user: {
                 id:user.id
@@ -79,9 +77,7 @@ check('email', 'Please include a valid email').isEmail()
                 if(err) throw err;
                 res.json({token})
             })
-        // res.send('User Registerd')
-
-
+       
     }
 
     catch(err){
@@ -97,4 +93,3 @@ res.status(500).send('Server Error')}
 
 module.exports = router;
 
-//  export default router;

@@ -5,30 +5,6 @@ import { connect } from 'react-redux';
 import { createProfile,getCurrentProfile } from '../../actions/profile';
 
 
-// const CreateProfile = ({ createProfile, history }) => {
-
-//     const [formData, setFormData] = useState({
-//         pan: '',
-//         address: '',
-//         phone: ''
-//     });
-
-//     const {
-//         pan,
-//         address,
-//         phone
-//     } = formData
-
-
-
-//     const onChange = (e) =>
-//     setFormData({ ...formData, [e.target.name]: e.target.value });
-
-//     const onSubmit = (e) => {
-//         e.preventDefault();
-//         createProfile(formData, history);
-//       };
-
 
 const initialState = {
     pan: '',
@@ -45,7 +21,7 @@ const initialState = {
   
     const creatingProfile = useMatch('/create-profile');
   
-    // const [displaySocialInputs, toggleSocialInputs] = useState(false);
+    
   
     const navigate = useNavigate();
   
@@ -60,13 +36,7 @@ const initialState = {
         for (const key in profile) {
           if (key in profileData) profileData[key] = profile[key];
         }
-        // for (const key in profile.social) {
-        //   if (key in profileData) profileData[key] = profile.social[key];
-        // }
-        // the skills may be an array from our API response
-        // if (Array.isArray(profileData.skills))
-        //   profileData.skills = profileData.skills.join(', ');
-        // set local state with the profileData
+       
         setFormData(profileData);
       }
     }, [loading, getCurrentProfile, profile]);
@@ -126,11 +96,7 @@ const initialState = {
     );
 };
 
-// CreateProfile.propTypes = {
-//     createProfile: PropTypes.func.isRequired,
-//   };
-  
-//   export default connect(null, { createProfile })(withRouter(CreateProfile));
+
 
 
 CreateProfile.propTypes = {

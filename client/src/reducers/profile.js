@@ -9,7 +9,6 @@ import {
 const initialState = {
     profile: null,
     profiles: [],
-    // repos: [],
     loading: true,
     error: {},
   };
@@ -37,7 +36,6 @@ const initialState = {
             return {
                 ...state,
                 profile: null,
-                // repos: [],
                 loading: false,
               };  
           

@@ -46,11 +46,6 @@ useEffect(()=>{
             path='/dashboard'
             element={<PrivateRoute component={Dashboard} />}
           />
-          {/* <Route
-            path='/transaction'
-            element={<PrivateRoute component={Transaction} />}
-          /> */}
-
           <Route
             path='/create-profile'
             element={<PrivateRoute component={CreateProfile} />}

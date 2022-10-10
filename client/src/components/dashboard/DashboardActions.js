@@ -13,8 +13,7 @@ const DashboardActions = ({}) => {
 <Link  to =  "/transaction" className="btn btn-light"><i className="fas fa-user-circle text-primary">
     
 </i> Transaction</Link>
-        {/* <a Link to='/add-experience' className="btn btn-light"
-          ><i className="fab fa-black-tie text-primary"></i> Add Experience</a> */}
+       
        
       </div>
   )

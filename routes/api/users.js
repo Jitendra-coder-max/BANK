@@ -6,9 +6,9 @@ const config = require('config');
 const { check, validationResult } = require('express-validator');
 const User = require('../../modals/User')
 
-// const { check, validationResult} = require('express-validator')
 
-// router.get('/',(req,res) => res.send('User route'));
+
+
 
 router.post('/',[check('name', 'Name is required')
 .not().
@@ -25,7 +25,7 @@ check('email', 'Please include a valid email').isEmail()
         return res.status(400).json({ errors:errors.array()})
     }
 
-    // name email password accountBalance
+    
 
     const {name, email, password,accountBalance} = req.body;
 
@@ -64,7 +64,7 @@ check('email', 'Please include a valid email').isEmail()
                 if(err) throw err;
                 res.json({token})
             })
-        // res.send('User Registerd')
+        
 
 
     }
@@ -79,10 +79,3 @@ res.status(500).send('Server Error')}
 module.exports = router;
 
 
-// const express = require('express');
-// const router = express.Router();
-
-
-// router.get('/',(req,res) => res.send('User route'));
-
-// module.exports = router;
